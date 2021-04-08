@@ -1,36 +1,20 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import useAudio from '../useAudio.js';
+import './Pad.css'
 
-const useAudio = url => {
-  const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(false);
 
-  const toggle = () => setPlaying(!playing);
+export const Pad = ({ url, isAudioOn, isLoopOn, name }) => {
+  const [playing, toggle] = useAudio(url, isAudioOn, isLoopOn, name);
 
-  useEffect(() => {
-      playing ? audio.play() : audio.pause();
-    },
-    [playing]
-  );
-
-  useEffect(() => {
-    audio.addEventListener('ended', () => setPlaying(false));
-    return () => {
-      audio.removeEventListener('ended', () => setPlaying(false));
-    };
-  }, []);
-
-  return [playing, toggle];
-};
-
-export const Pad = (props) => {
-  const [playing, toggle] = useAudio(props.url);
 
   return (
-    <div>
-      <div className="Squer" onClick={toggle}>{playing ? "On" : "Off"}</div>
-    </div>
+    <>
+      <button className="squere" onClick={toggle}>
+        {name +' '}
+        {playing ? 'On' : 'Off'}
+        
+      </button>
+    </>
   );
 };
-
 

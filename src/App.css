@@ -4,6 +4,10 @@
 	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
-	background-color: #000000;
-	color: #352D39;
+	background-color: #2e2b2b;
+	color: #8952a5;
+  	padding: 5%;
+  	box-sizing: border-box;
+	font-weight: bold;
+    font-style: italic;
 }
