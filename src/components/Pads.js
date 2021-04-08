@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Pad } from './Pad.js';
+import './Pads.css'
 
 export const Pads = (props) => {
   const { data } = props;
@@ -48,16 +49,17 @@ export const Pads = (props) => {
           url={pad.url}
           isAudioOn={isAudioOn}
           isLoopOn={isLoopOn}
+          id={pad.id}
         />
       ))}
         
-      <div className = "playButton">
-            <button onClick={handleClick} style={{ marginTop: '20px' }}>
-                {`${isAudioOn ? 'Stop' : 'Play'}`}
-            </button>
+      <div className = "playButtonContainer">
+          <button className="playButton" onClick={handleClick} >
+              {`${isAudioOn ? 'Stop' : 'Play'}`}
+          </button>
+      
+          <div>{isAudioOn ? 'AUDIO ON' : ' AUDIO Off'}</div>
       </div>
-
-      <div>{isAudioOn ? 'AUDIO ON' : ' AUDIO Off'}</div>
       <div>{printArr()}</div>
     </div>
   );

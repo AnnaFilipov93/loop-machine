@@ -1,4 +1,19 @@
-.playButton{
+.playButtonContainer{
     text-align: center;
     padding: 15px 15px;
+}
+.playButton {
+    padding: 5px 10px;
+    text-align: center;
+    width: 30%;
+    border: 3px solid #FF355E;
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff;
+    background-color:#FD5B78;
+    border-radius: 12px;
+    margin-left: 3px;
+    margin-top: 3px; 
+    margin-right: 3px;
+    margin-bottom: 3px;
 }

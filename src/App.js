@@ -1,5 +1,4 @@
 import './App.css';
-//import logo from './logo.svg';
 import {Data} from './components/Data.js';
 import {Pads} from './components/Pads.js';
 
