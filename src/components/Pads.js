@@ -9,6 +9,7 @@ export const Pads = (props) => {
   const [isAudioOn, setIsAudioOn] = useState(false);
   const [timer, setTimer] = useState(0);
 
+  //Check if the play state is true and set the loop
   useEffect(() => {
     if (isAudioOn) {
       const interval = setInterval(() => {
@@ -32,7 +33,6 @@ export const Pads = (props) => {
 
   return (
     <div className="pads">
-      {timer}
       <br/> <br/>
       {data.map((pad) => (
         <Pad
@@ -49,8 +49,8 @@ export const Pads = (props) => {
         <button className="playButton" onClick={handleClick} >
           {`${isAudioOn ? 'Stop' : 'Play'}`}
         </button>
-
-        <div>{isAudioOn ? 'AUDIO ON' : ' AUDIO Off'}</div>
+        <br/>
+        {timer}
       </div>
 
     </div>
