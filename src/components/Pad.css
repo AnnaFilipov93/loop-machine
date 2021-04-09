@@ -1,5 +1,5 @@
 .squereContainer{
-  align-items: top;
+  align-items: center;
 }
 
 
@@ -51,23 +51,6 @@
     margin-bottom: 3px;
   }
   
-  .squere1:hover,.squere4:hover,.squere7:hover {
-	background-color: #ffffff; 
-	color: #66FF66;
-  }
 
-  .squere0:hover,.squere3:hover,.squere6:hover {
-    background-color: #ffffff; 
-    color: #50BFE6;
-    }
-
-  .squere2:hover,.squere5:hover,.squere8:hover {
-    background-color: #ffffff; 
-    color: #FF9933;
-    }
-
-  .squere0:active,.squere2:active,.squere3:active{
-      background-color:#ffffff;
-     
-    }
+  
     
