@@ -1,71 +1,56 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Pad } from './Pad.js';
-import './Pads.css'
+import './Pads.css';
 
 export const Pads = (props) => {
   const { data } = props;
-  //const [isAudioOn, setIsAudioOn] = useState(false);
-  const [isLoopOn, setIsLoopOn] = useState(false);
-  const [counter, setCounter] = useState(0);
-  const [intervalId, setIntervalId] = useState(0);
-
-  //let arr = [];
-  
-  const handleClick = () => {
-    //setIsAudioOn((prev) => !prev);
-    setIsLoopOn((prev) => !prev);
-    
-  };
-const printArr = () => {
-  
-  /*
-
-    for(const i in arr){
-        console.log(`${i}: `);
-        console.dir(arr[i]);{}
-    }
-*/
-  };
+  const [isAudioOn, setIsAudioOn] = useState(false);
+  const [timer, setTimer] = useState(0);
 
   useEffect(() => {
-    if(isLoopOn){
-      const id = setInterval(() => {
-      setCounter(counter=> counter+1)
-      }, 9000);
-      
-      setIntervalId(()=>id)
-      
+    if (isAudioOn) {
+      const interval = setInterval(() => {
+        if (timer >= 7) {
+            setTimer(0);
+        } else setTimer((seconds) => seconds + 1);
+      }, 1000);
+      return () => clearInterval(interval);
     }
-      else{
-      clearInterval(intervalId);
-    }
-  }, [isLoopOn]);
-  
+  }, [timer, isAudioOn]);
+
+  //Handle the Play/Stop button
+  const handleClick = () => {
+    setIsAudioOn((prev) => {
+      if (!prev) return true;
+      setTimer(0);
+      return false;
+    });
+    setIsAudioOn(!isAudioOn);
+  };
 
   return (
     <div className="pads">
+      {timer}
+      <br/> <br/>
       {data.map((pad) => (
         <Pad
+          timer={timer}
           key={pad.name}
           name={pad.name}
           url={pad.url}
-          isLoopOn={isLoopOn}
+          isAudioOn={isAudioOn}
           id={pad.id}
-          counter={counter}
         />
       ))}
-        
-      <div className = "playButtonContainer">
-          <button className="playButton" onClick={handleClick} >
-              {`${isLoopOn ? 'Stop' : 'Play'}`}
-          </button>
 
-      
-          <div>{isLoopOn ? 'AUDIO ON' : ' AUDIO Off'}</div>
+      <div className = "playButtonContainer">
+        <button className="playButton" onClick={handleClick} >
+          {`${isAudioOn ? 'Stop' : 'Play'}`}
+        </button>
+
+        <div>{isAudioOn ? 'AUDIO ON' : ' AUDIO Off'}</div>
       </div>
-      <div>{printArr()}</div>
-      <div> {}</div>
+
     </div>
   );
 };
-
