@@ -5,9 +5,9 @@
 
 .squere1,.squere4,.squere7  {
 	  
-    padding: 35px 15px;
+    padding: 10% 0;
     text-align: center;
-    width: 32%;
+    width: 31%;
     border: 3px solid #66FF66;
     font-weight: bold;
     font-style: italic;
@@ -22,9 +22,9 @@
 
   .squere0,.squere3,.squere6  {
 	  
-    padding: 35px 15px;
+    padding: 10% 0;
     text-align: center;
-    width: 32%;
+    width: 31%;
     border: 3px solid #50BFE6;
     font-weight: bold;
     font-style: italic;
@@ -38,9 +38,9 @@
   }
   .squere2,.squere5,.squere8  {
 	  
-    padding: 35px 15px;
+    padding: 10% 0;
     text-align: center;
-    width: 32%;
+    width: 31%;
     border: 3px solid #FF9933;
     font-weight: bold;
     font-style: italic;

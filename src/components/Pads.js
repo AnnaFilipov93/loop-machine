@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Pad } from './Pad.js';
 import './Pads.css';
 
+//The Main component - combine all together
 export const Pads = (props) => {
+  //The data array
   const { data } = props;
   const [isAudioOn, setIsAudioOn] = useState(false);
   const [timer, setTimer] = useState(0);
