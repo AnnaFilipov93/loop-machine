@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Pad } from './Pad.js';
 import './Pads.css';
 
-//The Main component - combine all together
+//The Main component - combine all pads together
 export const Pads = (props) => {
   //The data array
   const { data } = props;
+  //Hooks capturing the isAudioOn => play/stop , timer => the seconds of a loop
   const [isAudioOn, setIsAudioOn] = useState(false);
   const [timer, setTimer] = useState(0);
 
@@ -15,7 +16,9 @@ export const Pads = (props) => {
       const interval = setInterval(() => {
         if (timer >= 7) {
             setTimer(0);
-        } else setTimer((seconds) => seconds + 1);
+        } else {
+          setTimer((seconds) => seconds + 1);
+        }
       }, 1000);
       return () => clearInterval(interval);
     }
@@ -30,7 +33,7 @@ export const Pads = (props) => {
     });
     setIsAudioOn(!isAudioOn);
   };
-
+  
   return (
     <div className="pads">
       <br/> <br/>
@@ -46,11 +49,11 @@ export const Pads = (props) => {
       ))}
 
       <div className = "playButtonContainer">
-        <button className="playButton" onClick={handleClick} >
-          {`${isAudioOn ? 'Stop' : 'Play'}`}
-        </button>
-        <br/>
-        {timer}
+          <button className="playButton" onClick={handleClick} >
+            {`${isAudioOn ? 'Stop' : 'Play'}`}
+          </button>
+          <br/>
+          {timer}
       </div>
 
     </div>
