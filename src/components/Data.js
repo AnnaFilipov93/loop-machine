@@ -1,39 +1,39 @@
 
 export const Data = [ 
-                      {url:'/data/120_future_funk_beats_25.mp3',
-                       name: 'Future',
+                      {url:'/data/clicking-and-distorting.mp3',
+                       name: 'Clicking',
                        id : 0},
 
-                      {url:'/data/120_stutter_breakbeats_16.mp3',
-                       name: 'Stutter',
+                      {url:'/data/crunchy-cows.mp3',
+                       name: 'Crunchy',
                        id : 1},
 
-                       {url:'/data/Bass Warwick heavy funk groove on E 120 BPM.mp3',
-                       name: 'Bass',
+                       {url:'/data/dark-going-deeper-bassline.mp3',
+                       name: 'Dark',
                        id : 2},
 
-                       {url:'/data/electric guitar coutry slide 120bpm - B.mp3',
-                       name: 'Electric',
+                       {url:'/data/glitchy-electro-808-snares.mp3',
+                       name: 'Glitchy',
                        id : 3},
 
-                       {url:'/data/FUD_120_StompySlosh.mp3',
-                       name: 'FUD',
+                       {url:'/data/my-conga-luvs-drum-machines4.mp3',
+                       name: 'Conga',
                        id : 4},
 
-                       {url:'/data/GrooveB_120bpm_Tanggu.mp3',
-                       name: 'Groove',
+                       {url:'/data/puppy-seven-loop1.mp3',
+                       name: 'Puppy',
                        id : 5},
 
-                       {url:'/data/MazePolitics_120_Perc.mp3',
-                       name: 'Maze',
+                       {url:'/data/shot-her-down-folksy-harmony.mp3',
+                       name: 'Shot',
                        id : 6},
 
-                       {url:'/data/PAS3GROOVE1.03B.mp3',
-                       name: 'PAS',
+                       {url:'/data/soul-shake-vocal-harmonies.mp3',
+                       name: 'Soul',
                        id : 7},
                        
-                       {url:'/data/SilentStar_120_Em_OrganSynth.mp3',
-                       name: 'SStar',
+                       {url:'/data/whos-going-to-save-me-guitar.mp3',
+                       name: 'Whos',
                        id : 8},
                       
                     ];

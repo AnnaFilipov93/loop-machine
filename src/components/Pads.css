@@ -1,19 +1,18 @@
-
-.playButtonContainer{
-    text-align: center;
-    padding: 15px 15px;
+.playButtonContainer {
+  text-align: center;
+  padding: 15px 15px;
 }
 .playButton {
-    padding: 5px 10px;
-    text-align: center;
-    width: 33%;
-    border: 3px solid #FF355E;
-    font-weight: bold;
-    font-style: italic;
-    color: #ffffff;
-    background-color:#FD5B78;
-    border-radius: 12px;
-    margin-top: 3px; 
-    margin-right: 4px;
-    margin-bottom: 3px;
+  padding: 5px 10px;
+  text-align: center;
+  width: 33%;
+  border: 3px solid #ff355e;
+  font-weight: bold;
+  font-style: italic;
+  color: #ffffff;
+  background-color: #fd5b78;
+  border-radius: 12px;
+  margin-top: 3px;
+  margin-right: 12px;
+  margin-bottom: 3px;
 }

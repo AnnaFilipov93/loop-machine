@@ -26,8 +26,10 @@ const useAudio = (url, isAudioOn, timer) => {
 
   useEffect(() => {
     audio.addEventListener('ended', () => setPlaying(false));
+    console.log("mount");
     return () => {
       audio.removeEventListener('ended', () => setPlaying(false));
+      console.log("unmount");
     };
   }, [audio]);
 
